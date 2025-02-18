@@ -4,10 +4,13 @@ import ScreenWrapper from '../components/ScreenWrapper';
 import Button from '../components/Button';
 
 import { hp, wp } from './../Helper/common';
+import { useRouter } from 'expo-router';
 
 const { width, height } = Dimensions.get("window");
 
 const Welcome = () => {
+    const router = useRouter();
+
     return (
         <ScreenWrapper bg="white">
             <StatusBar translucent backgroundColor="transparent" barStyle="dark-content" />
@@ -19,9 +22,9 @@ const Welcome = () => {
                         source={require('../assets/images/Welcome.jpg')} 
                     />
                  <View style={{gap: 15}}>
-                    <Text style={styles.title}>LinkUp</Text>
+                    <Text style={styles.title}>ChalkTalk</Text>
                     <Text style={styles.desc}>
-                    Confess, troll, and stay anonymous Dare to speak?
+                    Where students express everything, from JoKes to deep Thoughts.
                     </Text>
                  </View>
 
@@ -30,11 +33,11 @@ const Welcome = () => {
                         title="Sign Up"
                         buttonstyle={{ marginHorizontal: wp(4) }}
                         titleStyles={{ color: 'black' }}
-                        onPress = {()=>{}}
+                        onPress = {()=> router.push('signUp')}
                     />
                     <View style={styles.bottomTextConatainer}/>
                     <Text style={styles.loginText}>Already have an account?</Text>
-                    <Pressable>
+                    <Pressable onPress={()=> router.push('login')}> 
                         <Text style={styles.loginButton}>Login</Text>
                     </Pressable>
                     </View>
