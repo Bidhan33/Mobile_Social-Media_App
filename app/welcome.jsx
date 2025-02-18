@@ -24,7 +24,7 @@ const Welcome = () => {
                  <View style={{gap: 15}}>
                     <Text style={styles.title}>ChalkTalk</Text>
                     <Text style={styles.desc}>
-                    Where students express everything, from JoKes to deep Thoughts.
+                    Where Students Express Everything, from JoKes to deep Thoughts.
                     </Text>
                  </View>
 
